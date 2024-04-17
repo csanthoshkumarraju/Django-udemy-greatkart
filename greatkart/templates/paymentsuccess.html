@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .success-card {
+            max-width: 500px;
+            margin: 50px auto;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #fff;
+            padding: 40px;
+        }
+
+        .success-logo {
+            max-width: 150px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .success-heading {
+            color: #28a745;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .success-text {
+            color: #6c757d;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .detail-item {
+            margin-bottom: 10px;
+        }
+
+        .detail-label {
+            color: #6c757d;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            color: #495057;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card success-card padding">
+                    <div class="card-body text-center">
+                        <img src="https://www.shutterstock.com/image-vector/successfully-completed-vector-seal-isolated-260nw-1547881016.jpg" alt="Success Logo" class="success-logo">
+                        <h2 class="success-heading">Payment Successful</h2>
+                        <p class="success-text">Thank you for your purchase!</p>
+                        <div class="detail-item">
+                            <div class="detail-label">Order Number: #123456</div>
+                
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Payment ID: 7890ABCD</div>
+                            
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">User Details:</div>
+                            <div class="detail-value">
+                                <p>Name: <span class="font-weight-bold">John Doe</span></p>
+                                <p>Email: <span class="font-weight-bold">john.doe@example.com</span></p>
+                                <p>Address: <span class="font-weight-bold">123 Main St, Anytown, USA</span></p>
+                                <div style="text-align: center;">
+                                    <img src="https://cdn.textstudio.com/output/sample/normal/1/4/4/9/thank-you-logo-275-9441.png" alt="Thank You" class="img-fluid logo" style="width: 120px; height: auto;" />
+
+
+                                    <h4 class="text-info">Thank you for shopping with us.See you again. Please click on the 'Go To Dashboard' button to view your order status.</h4>
+                                    <a href="{% url "dashboard" %}" class="btn btn-info">GO TO Dashboard</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</body>
+{% endblock content %}
+</html>

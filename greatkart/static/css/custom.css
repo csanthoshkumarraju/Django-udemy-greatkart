@@ -1,0 +1,43 @@
+.userrating {
+    display: inline-block;
+    border: 0;
+}
+
+.userrating > input {
+    display: none;
+}
+
+.userrating > label {
+    float: right;
+    color: #ddd;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.userrating > label:before {
+    content: "\2605";
+    margin: 5px;
+}
+
+.userrating > input:checked ~ label,
+.userrating > label:hover {
+    color: gold;
+}
+
+.half:before {
+    content: "\2605";
+    margin: 5px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 1em;
+}
+
+.half:after {
+    content: "\2605";
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    overflow: hidden;
+    color: gold;
+}

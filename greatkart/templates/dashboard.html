@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- ========================= SECTION CONTENT ========================= -->
+<body>
+<section class="section-conten padding-y bg">
+{% include "alerts.html" %}
+<div class="container">
+	<div class="row">
+	{% include "dashboaerdside.html" %}
+	<main class="col-md-9">
+		<article class="card">
+		<header class="card-header">
+			<strong class="d-inline-block mr-3">Logged in as:</strong>
+			<span>{{ user.first_name}} {{ user.last_name }}</span>
+		</header>
+		<div class="card-body">
+			<div class="row"> 
+				<div class= "col-md-6">
+					<div class="card text-center">
+						<div class="card-body">
+							<h5 class="card-title">Total orders</h5>
+							<h4>100</h4>
+							<a class="list-group-item" href="#">View Orders </a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class= "col-md-6">
+					<div class="card text-center">
+						<div class="card-body">
+							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" class="rounded-circle shadow-4"
+  								style="width: 60px;" alt="Avatar" />
+								<p class="mb-0">{{ user.email}}</p>
+								<p class="mb-0">{{ user.phone_number}}</p>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div> <!-- row.// -->
+		</div> <!-- card-body .// -->
+		
+		</article> <!-- order-group.// --> 
+	</main>
+</div> <!-- row.// -->
+</div>
+
+
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+
+</body>
+{% endblock content %}
+</html>
